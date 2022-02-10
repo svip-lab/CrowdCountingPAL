@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES=0 python baseline_train.py \
+                         --run_id 2022012201\
+                         -b 1\
+                         --epochs 1000\
+                         --lr 1e-6\
+                         --opt_type 'SGD'\
+                         --dataset 'SHT_A'\
+                         --train_json '../data/json/SHT_A_train.json'\
+                         --val_json '../data/json/SHT_A_val.json'\
+                         --gt_ratio '2020_12_16_v2_rand'\
+                         --print-freq 400\
