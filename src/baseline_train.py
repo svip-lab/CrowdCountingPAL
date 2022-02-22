@@ -164,6 +164,9 @@ def train(train_loader, model, criterion, optimizer, epoch):
 
         target_20 = target_20.type(torch.FloatTensor).cuda()
         target_20 = Variable(target_20)
+        
+        target = target * mask
+        target_20 = target_20 * mask
 
         #import pdb; pdb.set_trace()
         img = img.cuda()
